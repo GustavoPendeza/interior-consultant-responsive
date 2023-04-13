@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
+
+body {
+    background-color: #181719;
+    position: relative;
+    margin: 2em 4em;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    background-color: #181719;
+    border: 1px solid #FFFFFF;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    font-size: 14px;
+    width: 102px;
+    height: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li.active a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+#section {
+    display: flex;
+    margin-top: 3rem;
+}
+
+#title {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+#info {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 410px;
+}
+
+#text {
+    width: 50%;
+    margin-top: 5rem;
+}
+
+#read {
+    margin-top: 3rem;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#image {
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#photo1 {
+    width: 100%;
+}
+
+#card {
+    position: relative;
+    width: 310px;
+    padding: .5rem 5rem .5rem 1.5rem;
+    background: #181719;
+    z-index: 100;
+    bottom: 80px;
+    right: 30px;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+#profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#photo2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+#profile-info p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #828282;
+}
+
+#card-text {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+    color: #A9A9A9;
+}
+
+#footer {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1600px) {
+    body {
+        max-width: 1440px;
+        margin: 2em auto;
+    }
+
+    #section {
+        display: flex;
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    body {
+        margin: 1em;
+    }
+    
+    #btn-mobile {
+        display: flex;
+        border: none;
+        background: none;
+    }
+
+    #hamburger {
+        display: block;
+        color: #FFFFFF;
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+        transition: .3s;
+        position: relative;
+    }
+
+    nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    
+    nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    
+    nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    
+    #logo.active {
+        visibility: hidden;
+    }
+    
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        top: 2rem;
+        left: -1rem;
+        right: -1rem;
+        background-color: #181719;
+        height: 0;
+        transition: .6s;
+        z-index: 1000;
+        text-align: center;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    #menu a {
+        margin-bottom: 1rem;
+    }
+
+    #nav.active #menu {
+        height: calc(100% - 31vh);
+        padding-top: 30vh;
+        visibility: visible;
+    }
+
+    #section {
+        display: block;
+    }
+
+    #text {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #title {
+        font-size: 36px;
+    }
+
+    #info {
+        font-size: 14px;
+        max-width: 250px;
+    }
+
+    #read {
+        margin-top: 2rem;
+    }
+
+    #image {
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+
+    #card {
+        width: 200px;
+        bottom: 55px;
+        right: 15px;
+    }
+
+    #photo2 {
+        width: 40px;
+        height: 40px;
+    }
+
+    #name {
+        font-size: 12px;
+    }
+
+    #profile-info p {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    #card-text {
+        font-size: 18px;
+    }
+}
